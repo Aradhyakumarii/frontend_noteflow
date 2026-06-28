@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #243052 transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #243052;
+    border-radius: 999px;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply border border-white/10 bg-surface-900/80 backdrop-blur-xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-glow via-accent to-cyan-300 bg-clip-text text-transparent;
+  }
+}
